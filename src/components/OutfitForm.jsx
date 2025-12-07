@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Home() {
+function OutfitForm() {
   return (
     <div>
-      Home works!
+      
     </div>
   )
 }
 
-export default Home
+export default OutfitForm
