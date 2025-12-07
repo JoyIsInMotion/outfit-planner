@@ -3,7 +3,7 @@ import React from 'react'
 function CreateOutfitPage() {
   return (
     <div>
-      Outfit Page Works!
+     Create  Page Works!
     </div>
   )
 }
