@@ -1,6 +1,8 @@
 import React from 'react'
+import ItemCard from '../components/ItemCard'
 
 function OutfitsPage() {
+
   const outfits = [
     {
       id: 'outfit1',
@@ -16,22 +18,19 @@ function OutfitsPage() {
     },
     {
       id: 'outfit3',
-      name: 'Sexy Look',
-      description: 'A sexy diva outfit.',
-      imageUrl: 'https://example.com/sexy-look.jpg'
+      name: 'Cool Look',
+      description: 'A cool diva outfit.',
+      imageUrl: 'https://example.com/cool-look.jpg'
     }
 
   ]
 
   const outfitsList = outfits.map(outfit =>
     <li key={outfit.id}>
-      <p>
-        {outfit.name}
-      </p>
-      <img src={outfit.imageUrl}
-        alt={outfit.name} />
-        <p>{outfit.description}</p>
-    </li>)
+    <ItemCard outfit={outfit} />
+    </li>
+  )
+
 
   return (
     <>
@@ -39,11 +38,14 @@ function OutfitsPage() {
         My Outfits
       </h2>
 
-      <ul>
-        {outfitsList}
-      </ul>
+      {outfits.length === 0 ? (
+        <p>No outfits found...</p>
+      ) : (
+        <ul>{outfitsList}</ul>
+      )} 
     </>
   )
 }
+
 
 export default OutfitsPage

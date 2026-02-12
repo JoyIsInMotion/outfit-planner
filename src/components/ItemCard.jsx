@@ -1,9 +1,15 @@
 import React from 'react'
 
-const ItemCard = () => {
+
+const ItemCard = ({outfit}) => {
   return (
     <div>
-      ItemCard Works!
+        <p>
+          {outfit.name}
+        </p>
+        <img src={outfit.imageUrl}
+          alt={outfit.name} />
+        <p>{outfit.description}</p>
     </div>
   )
 }
